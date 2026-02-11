@@ -19,7 +19,7 @@ EOT
     cosmosdb_sql_database_id = string
     name                     = string
     stream_analytics_job_id  = string
-    authentication_mode      = optional(string, "ConnectionString")
+    authentication_mode      = optional(string) # Default: "ConnectionString"
     document_id              = optional(string)
     partition_key            = optional(string)
   }))
