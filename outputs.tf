@@ -1,3 +1,7 @@
+output "stream_analytics_output_cosmosdbs_id" {
+  description = "Map of id values across all stream_analytics_output_cosmosdbs, keyed the same as var.stream_analytics_output_cosmosdbs"
+  value       = { for k, v in azurerm_stream_analytics_output_cosmosdb.stream_analytics_output_cosmosdbs : k => v.id }
+}
 output "stream_analytics_output_cosmosdbs_authentication_mode" {
   description = "Map of authentication_mode values across all stream_analytics_output_cosmosdbs, keyed the same as var.stream_analytics_output_cosmosdbs"
   value       = { for k, v in azurerm_stream_analytics_output_cosmosdb.stream_analytics_output_cosmosdbs : k => v.authentication_mode }
