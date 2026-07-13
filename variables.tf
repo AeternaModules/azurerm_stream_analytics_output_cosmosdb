@@ -4,8 +4,8 @@ Map of stream_analytics_output_cosmosdbs, attributes below
 Required:
     - container_name
     - cosmosdb_account_key
-    - cosmosdb_account_key_key_vault_id (alternative to cosmosdb_account_key - read from Key Vault instead)
-    - cosmosdb_account_key_key_vault_secret_name (alternative to cosmosdb_account_key - read from Key Vault instead)
+    - cosmosdb_account_key_key_vault_id (optional, alternative to cosmosdb_account_key)
+    - cosmosdb_account_key_key_vault_secret_name (optional, alternative to cosmosdb_account_key)
     - cosmosdb_sql_database_id
     - name
     - stream_analytics_job_id
@@ -23,7 +23,7 @@ EOT
     cosmosdb_sql_database_id                   = string
     name                                       = string
     stream_analytics_job_id                    = string
-    authentication_mode                        = optional(string) # Default: "ConnectionString"
+    authentication_mode                        = optional(string)
     document_id                                = optional(string)
     partition_key                              = optional(string)
   }))
